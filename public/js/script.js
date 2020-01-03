@@ -58,11 +58,13 @@ function saveEmployee(){
 		obj = JSON.parse(res);
 		if(obj.return){
 			$('#exampleModal').modal('hide');
-			location.reload();
+			alert('Berhasil di simpan');
+			location.reload();	
 		}else{
 			alert(obj.msg);
 		}
 	});
+	return false;
 	
 }
 
@@ -73,6 +75,7 @@ function deleteEmployee(){
 		obj = JSON.parse(res);
 		if(obj.return){
 			$('#deleteModal').modal('hide');
+			alert('Berhasil di hapus');
 			location.reload();
 		}else{
 			alert(obj.msg);
